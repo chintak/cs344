@@ -29,7 +29,7 @@ void checkResultsExact(const T* const ref, const T* const gpu, size_t numElem) {
       //the + is magic to convert char to int without messing
       //with other types
       std::cerr << "Reference: " << std::setprecision(17) << +ref[i] <<
-                 "\nGPU      : " << +gpu[i] << std::endl;
+		 "\nGPU      : " << +gpu[i] << std::endl;
       exit(1);
     }
   }
@@ -51,7 +51,7 @@ void checkResultsEps(const T* const ref, const T* const gpu, size_t numElem, dou
     else if (diff > eps1) {
       std::cerr << "Difference at pos " << +i << " exceeds tolerance of " << eps1 << std::endl;
       std::cerr << "Reference: " << std::setprecision(17) << +ref[i] <<
-        "\nGPU      : " << +gpu[i] << std::endl;
+	"\nGPU	    : " << +gpu[i] << std::endl;
       exit(1);
     }
     totalDiff += diff * diff;
